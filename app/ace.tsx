@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function AceProfile() {
   return (
@@ -15,8 +15,18 @@ export default function AceProfile() {
           source={{ uri: 'https://via.placeholder.com/120' }} // Replace with your profile image
           style={styles.profilePic}
         />
-        <Text style={styles.profileName}> Aceshreda </Text>
+        <Text style={styles.profileName}>Aceshreda</Text>
         <Text style={styles.profileBio}>⚡ Vibe coder | man united fan | Creator ⚡</Text>
+      </View>
+
+      {/* Intro Section */}
+      <View style={styles.introSection}>
+        <Text style={styles.introTitle}>About Me</Text>
+        <Text style={styles.introText}>📍 Lives in Durban</Text>
+        <Text style={styles.introText}>🎓 School: Example High School</Text>
+        <Text style={styles.introText}>⚽ Hobbies: Watching soccer & gaming</Text>
+        <Text style={styles.introText}>🎂 Age: 21 years old</Text>
+        <Text style={styles.introText}>❤️ Relationship Status: Single</Text>
       </View>
 
       {/* Action Buttons */}
@@ -94,6 +104,25 @@ const styles = StyleSheet.create({
     color: '#FFD700',
     marginTop: 5,
     textAlign: 'center',
+  },
+  introSection: {
+    backgroundColor: '#111',
+    margin: 15,
+    padding: 15,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#FFD700',
+  },
+  introTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#FFD700',
+    marginBottom: 10,
+  },
+  introText: {
+    fontSize: 14,
+    color: '#FFD700',
+    marginBottom: 5,
   },
   actionRow: {
     flexDirection: 'row',
